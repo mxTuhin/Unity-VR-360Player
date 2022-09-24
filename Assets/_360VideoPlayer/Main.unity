@@ -282,16 +282,33 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2212970416081037860, guid: dac5059146fac85418b8fd5401a723bb,
+    - target: {fileID: 387959600570914235, guid: dac5059146fac85418b8fd5401a723bb,
         type: 3}
-      propertyPath: m_VideoClip
+      propertyPath: VideoClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 387959600570914235, guid: dac5059146fac85418b8fd5401a723bb,
+        type: 3}
+      propertyPath: VideoClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 32900000, guid: d9278eb06c9f1454cb9c0ca843b5c80f,
+        type: 3}
+    - target: {fileID: 387959600570914235, guid: dac5059146fac85418b8fd5401a723bb,
+        type: 3}
+      propertyPath: VideoClips.Array.data[1]
       value: 
       objectReference: {fileID: 32900000, guid: 29f3e6d6eb65b404abb27b7a660220cb,
         type: 3}
     - target: {fileID: 2212970416081037860, guid: dac5059146fac85418b8fd5401a723bb,
         type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: d9278eb06c9f1454cb9c0ca843b5c80f,
+        type: 3}
+    - target: {fileID: 2212970416081037860, guid: dac5059146fac85418b8fd5401a723bb,
+        type: 3}
       propertyPath: m_PlayOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2212970416081037861, guid: dac5059146fac85418b8fd5401a723bb,
         type: 3}
@@ -974,6 +991,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3686838935489496150, guid: f6c52d7514cd22142b1816fc50c85d99,
+        type: 3}
+      propertyPath: VideoManager
+      value: 
+      objectReference: {fileID: 387959600570914235}
     - target: {fileID: 3686838935489496150, guid: f6c52d7514cd22142b1816fc50c85d99,
         type: 3}
       propertyPath: videoManager

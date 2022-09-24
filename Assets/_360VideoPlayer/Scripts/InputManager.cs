@@ -8,8 +8,8 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        // if(!VideoManager.IsVideoReady)
-        //     return;
+        if(!VideoManager.IsVideoReady)
+            return;
         
         OculusInput();
         KeyboardInput();
@@ -24,22 +24,22 @@ public class InputManager : MonoBehaviour
 
         if(OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch))
         {
-
+            VideoManager.PreviousVideo();
         }
 
         if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch))
         {
-
+            VideoManager.NextVideo();
         }
 
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.LTouch))
         {
-
+            VideoManager.SeekBack();
         }
 
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
         {
-
+            VideoManager.SeekForward();
         }
     }
 
@@ -52,22 +52,22 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-
+            VideoManager.PreviousVideo();
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-
+            VideoManager.NextVideo();
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-
+            VideoManager.SeekBack();
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-
+        {  
+            VideoManager.SeekForward();
         }
     }
 }
