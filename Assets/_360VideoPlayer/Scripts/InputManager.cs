@@ -8,8 +8,8 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        if(!VideoManager.IsVideoReady)
-            return;
+        // if(!VideoManager.IsVideoReady)
+        //     return;
         
         OculusInput();
         KeyboardInput();
@@ -19,7 +19,7 @@ public class InputManager : MonoBehaviour
     {
         if(OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.All))
         {
-
+            VideoManager.PauseToggle();
         }
 
         if(OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch))
@@ -47,7 +47,7 @@ public class InputManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
+            VideoManager.PauseToggle();
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
